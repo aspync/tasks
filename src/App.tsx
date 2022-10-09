@@ -5,7 +5,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">Aspyn Call</header>
-            <p>CISC275</p>
+            <p>COS420</p>
+            <p>Hello World</p>
         </div>
     );
 }
