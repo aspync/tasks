@@ -5,6 +5,7 @@ import "./App.css";
 function App(): JSX.Element {
     return (
         <div className="App">
+<<<<<<< HEAD
             <header className="App-header">Aspyn Call</header>
             <h1>Welcome to my React site!</h1>
             <p>COS420</p>
@@ -50,6 +51,14 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
+=======
+            <header className="App-header">
+                UM COS420 with React Hooks and TypeScript
+            </header>
+            <p>
+                Edit <code>src/App.tsx</code> and save to reload.
+            </p>
+>>>>>>> upstream/task-functions
         </div>
     );
 }
