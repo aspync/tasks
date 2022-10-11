@@ -4,8 +4,8 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    (temperature - 32) * (5 / 9);
-    return 0;
+    const celsius: number = (temperature - 32) * (5 / 9);
+    return celsius;
 }
 
 /**
@@ -13,7 +13,9 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    first + second + third;
+    if (first > 0 && second > 0 && third > 0) {
+        const total: number = first + second + third;
+    }
     return 0;
 }
 
@@ -22,7 +24,8 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    return "";
+    const statement: string = message.toUpperCase() + "!";
+    return statement;
 }
 
 /**
