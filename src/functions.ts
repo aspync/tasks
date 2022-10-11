@@ -14,7 +14,7 @@ export function fahrenheitToCelius(temperature: number): number {
  */
 export function add3(first: number, second: number, third: number): number {
     if (first > 0 && second > 0 && third > 0) {
-        const total: number = first + second + third;
+        return first + second + third;
     }
     return 0;
 }
@@ -42,5 +42,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word.includes("yes" || "YES" || "Yes")) {
+        return true;
+    } else if (word.includes("no" || "NO" || "No")) {
+        return false;
+    } else {
+        return null;
+    }
 }
