@@ -31,7 +31,10 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const nums = numbers.map((number: string): number =>
+        isNaN(parseInt(number)) ? 0 : parseInt(number)
+    );
+    return nums;
 }
 
 /**
