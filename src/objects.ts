@@ -31,7 +31,14 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return false;
+    let correct = false;
+    if (answer.trim().toLowerCase() === question.expected.toLowerCase()) {
+        correct = true;
+    } else {
+        correct = false;
+    }
+    console.log(answer + ": " + correct);
+    return correct;
 }
 
 /**
@@ -41,7 +48,17 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
-    return false;
+    let valid = false;
+    if (
+        question.type === "short_answer_question" ||
+        question.options.includes(answer)
+    ) {
+        valid = true;
+    } else {
+        valid = false;
+    }
+    console.log(answer + ": " + valid);
+    return valid;
 }
 
 /**
