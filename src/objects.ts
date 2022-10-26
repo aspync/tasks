@@ -68,7 +68,16 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    const newID = question.id.toString();
+    console.log(newID);
+
+    const newName = question.name.substring(0, 10);
+    console.log(newName);
+
+    const str = newID + ": " + newName;
+    console.log(str);
+
+    return str;
 }
 
 /**
