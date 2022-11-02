@@ -13,10 +13,20 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    if (first > 0 && second > 0 && third > 0) {
-        return first + second + third;
+    let total = 0;
+    if (first > 0) {
+        total += first;
     }
-    return 0;
+
+    if (second > 0) {
+        total += second;
+    }
+
+    if (third > 0) {
+        total += third;
+    }
+
+    return total;
 }
 
 /**
@@ -33,7 +43,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return message.includes("?") ? true : false;
+    return message.endsWith("?") ? true : false;
 }
 
 /**
@@ -42,9 +52,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    if (word.includes("yes" || "YES" || "Yes")) {
+    word = word.toLowerCase();
+
+    if (word === "yes") {
         return true;
-    } else if (word.includes("no" || "NO" || "No")) {
+    } else if (word === "no") {
         return false;
     } else {
         return null;
