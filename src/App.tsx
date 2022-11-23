@@ -27,6 +27,9 @@ function App(): JSX.Element {
             <div>
                 <DoubleHalf></DoubleHalf>
             </div>
+            <div>
+                <ChooseTeam></ChooseTeam>
+            </div>
         </>
     );
 }
