@@ -13,19 +13,18 @@ const PEOPLE = [
 export function ChooseTeam(): JSX.Element {
     const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
+    const [newMember, setNewMember] = useState<string>("New Member");
 
     function chooseMember() {
-        /*
+        const newMembers = [...PEOPLE, newMember];
         if (!team.includes(newMember)) {
-            team.push(newMember);
+            setTeam(newMembers);
         }
-        */
     }
 
     function clearTeam() {
-        /*
-        team = [];
-        */
+        const emptyTeam = team.splice(0, team.length);
+        setTeam(emptyTeam);
     }
 
     return (
@@ -53,3 +52,5 @@ export function ChooseTeam(): JSX.Element {
         </div>
     );
 }
+
+export default ChooseTeam;
